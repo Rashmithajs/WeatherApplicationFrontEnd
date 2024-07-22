@@ -1,0 +1,23 @@
+/* Apply the background image to the whole page */
+/* body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-image: url('https://middletownbid.org/ImageRepository/Document?documentID=3235');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
+
+    /* } */
+    /* my-element {
+        transition: all 0.5s ease-in 0.9s;
+    } */
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

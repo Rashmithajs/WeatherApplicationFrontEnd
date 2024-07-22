@@ -1,0 +1,102 @@
+<!-- Include Material Icons for better icon display -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Header Section -->
+<header class="header-container">
+    <h1 class="brand-name">Weather Pulse</h1>
+
+
+<nav class="text-container">
+  <a (click)="scrollToSection('services')">Services</a>
+  <a (click)="scrollToSection('contact')">Contact Us</a>
+</nav>
+
+
+</header>
+
+  <div class="image-text-container">
+      <div class="text-content">
+          <h2>Accurate Weather Forecasts at Weather Pulse</h2>
+          <p>Get accurate weather information anytime, anywhere. Stay informed with current, forecast, and historical data.</p>
+      </div>
+      <img src="https://th.bing.com/th/id/OIP._6UW1704oYjKYfVcf84iMgHaEc?rs=1&pid=ImgDetMain" alt="Weather Pulse" class="weather-image">
+  </div>
+
+  <div id="services" class="section">
+  <!-- Main Content Section -->
+  <h1>Our Services</h1>
+  <!-- Flex container for cards -->
+  <div class="cards-container">
+      <!-- Current Data Section -->
+      <div class="card">
+          <h2>Today's Weather</h2>
+          <h3>Weather Right Now!</h3>
+        <div class="search-bar-container"></div>
+          <input type="text" [(ngModel)]="currentCity" placeholder="Enter city"  class="search-input"/>
+          <button (click)="getCurrentWeather()" class="button">Search</button>
+      </div>
+
+
+      <!-- Forecast Section -->
+      <div class="card">
+          <h2>Future Outlook</h2>
+          <h3>Weather for next 15 days!</h3>
+          <div class="search-bar-container">
+              <input type="text" [(ngModel)]="forecastCity" placeholder="Enter city"  class="search-input"/>
+              <button (click)="getForecast()" class="button">Search</button>
+          </div>
+      </div>
+
+      <!-- History Section -->
+      <div class="card">
+          <h2>Weather History</h2>
+          <h3>Last 30 days weather!</h3>
+          <div class="search-bar-container">
+              <input type="text" [(ngModel)]="historyCity" placeholder="Enter city" class="search-input" />
+              <button (click)="getHistory()" class="button">Search</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="contact" class="section">
+<div class="contact-form-wrapper">
+  <div class="contact-form-container">
+    <h2>Contact Us</h2>
+    <h3>Schedule a session now to experience the power of accurate weather information.</h3>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmitContactForm()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Description:</label>
+        <textarea id="message" formControlName="message"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="contactForm.invalid" class="button">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+<footer class="footer-container">
+  <div class="left-content">
+      <mat-icon>copyright</mat-icon>
+      <span>© 2024 Your Weather Pulse. All rights reserved.</span>
+  </div>
+  <div class="right-content">
+      <mat-icon>email</mat-icon>
+      <mat-icon>phone</mat-icon>
+      <mat-icon>facebook</mat-icon>
+      <mat-icon>instagram</mat-icon>
+  </div>
+</footer>
+

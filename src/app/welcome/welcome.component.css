@@ -1,0 +1,285 @@
+/* Header styles */
+header.header-container {
+  background-color: rgb(26, 20, 20); /* Adjust as needed */
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  height: 40px;
+  align-items: center;
+
+}
+
+header .brand-name {
+  text-align: left;
+  font-size: 3em;
+  margin: 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+header .text-container {
+  text-align: right;
+  font-size: 1.5em;
+  /* align-items: center; */
+
+}
+
+/* Add spacing between navigation links */
+.text-container a {
+  margin-right: 2rem; /* Adjust the value as needed */
+}
+
+.text-container a:last-child {
+  margin-right: 0; /* Remove margin from the last link */
+}
+
+
+
+.image-text-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+  justify-content: space-between;
+  /* margin-left: 10px; */
+}
+
+.weather-image {
+  width: 50em;
+  height: 40em;
+  margin-right: 50px; /* Space between text and image */
+}
+
+.text-content {
+  max-width: 600px;
+}
+
+.text-content h2 {
+  margin: 40px 0px 0px 40px;  /*  Adds space below the heading */
+  font-family: 'Chakra Petch', sans-serif; /* Ensure proper font family syntax */
+  font-weight: 700; /* Make the text bold and more prominent */
+  font-size: 60px; /* Increase font size */
+  line-height: 1.2; /* Adjust line height for better readability */
+  color: #333; /* Adjust color for better contrast (can be changed as needed) */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for a stylish effect */
+  letter-spacing: -1px; /* Slightly adjust letter spacing for a refined look */
+
+}
+
+
+.text-content p {
+  margin: 40px 40px 40px 40px; /* Adds space below the paragraph */
+  font-family:'Chakra Petch', sans-serif; /* Set a clean, readable font */
+  font-size: 25px; /* Increase font size for better readability */
+  line-height: 1.6; /* Adjust line height for improved readability */
+  color: #555; /* Set a medium dark color for contrast (can be adjusted) */
+  text-align: left; /* Ensure text is aligned to the left */
+  letter-spacing: -1px; /* Slightly adjust letter spacing for better readability */
+}
+
+
+/* Main content styles */
+.content {
+  padding: 20px;
+  padding-top: 40px; /* Extra space at the top */
+  font-family: cursive, sans-serif;
+  margin: 0 auto;
+  max-width: 1200px; /* Adjust based on your design */
+  background-color: #f9f9f9; /* Optional: adds a light background for contrast */
+}
+
+/* Services heading styles */
+h1 {
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 4em; /* Adjust as needed */
+  text-align: center; /* Center the heading */
+}
+
+/* Flex container for cards */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1px; /* Space between cards */
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Gradient background */
+  border-radius: 20px; /* Slightly increased border-radius for smoother corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  padding: 10px; /* Increased padding for more content space */
+  text-align: center; /* Center text inside cards */
+  flex: 2;
+  box-sizing: border-box;
+  aspect-ratio: 2 / 2; /* Ensure all cards are square */
+  max-width: 300px; /* Adjusted size */
+  margin: 1px 1px; /* Margin for spacing between cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift card up on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.card h2 {
+  margin: 0 0 15px; /* Increased bottom margin */
+  font-weight: 600; /* Slightly lighter bold weight */
+  font-size: 1.5em; /* Adjusted font size for better readability */
+  color: #333; /* Darker text color for better contrast */
+}
+
+.input-field, .button {
+  width: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+/* Additional styles for better text input and button appearance */
+.input-field {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.button {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF; /* Button color */
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #100e0e; /* Example background color */
+  color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.left-content mat-icon {
+  margin-right: 10px; /* Add some space between the icon and the text */
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push the icons to the right */
+}
+
+.right-content mat-icon {
+  margin-left: 10px; /* Add space between the icons */
+}
+
+
+
+.search-input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.contact-form-wrapper {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  height: 50vh;
+  width: 100%;
+}
+
+.contact-form-container {
+  margin-top: 30px;
+  padding: 40px;
+  background-color: #e6dc56;
+  border: 1px solid #141313;
+  border-radius: 10px;
+  width: 600px; /* Adjust width as needed */
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #cfe6f3;
+  border-radius: 4px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4d5bdd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* app.component.css */
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 10rem 1rem;
+  height: 100vh;
+}
+
+#weather {
+  background-color: rgb(156, 172, 177);
+}
+
+#services {
+  background-color: rgb(172, 208, 172);
+}
+
+#contact {
+  background-color: rgb(159, 138, 138);
+}
+
+
+
+

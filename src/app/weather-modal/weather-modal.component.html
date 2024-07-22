@@ -1,0 +1,78 @@
+<!-- Include Material Icons for better icon display -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+
+<div class="display-container">
+  <h2 class="city-name">
+    <i class="wi wi-city"></i> City: {{ currentWeather?.address || historyData?.address || forecastData?.address }}
+  </h2>
+
+  <div *ngIf="currentWeather" class="current-weather-container">
+    <div class="header">
+      <h3>Current Weather</h3>
+      <button mat-icon-button (click)="onClose()" aria-label="Close" class="close-button">Close</button>
+    </div>
+    <div class="current-weather-display">
+      <div class="card">
+        <p><i class="wi wi-thermometer"></i> Temp: {{ currentWeather.days[0].temp }}°C</p>
+        <p><i class="wi wi-humidity"></i> Humidity: {{ currentWeather.days[0].humidity }}%</p>
+        <p><i class="wi wi-rain"></i> Precipitation: {{ currentWeather.days[0].precip }} mm</p>
+        <p><i class="wi wi-snow"></i> Snow: {{ currentWeather.days[0].snow }} mm</p>
+        <p><i class="wi wi-cloudy"></i> Conditions: {{ currentWeather.days[0].conditions }}</p>
+        <p><i class="wi wi-sunrise"></i> Sunrise: {{ currentWeather.days[0].sunrise }}</p>
+        <p><i class="wi wi-sunset"></i> Sunset: {{ currentWeather.days[0].sunset }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display historical data if available -->
+  <div *ngIf="historyData" class="history-display">
+    <div class="header">
+      <h3>Historical Data</h3>
+      <button mat-icon-button (click)="onClose()" aria-label="Close" class="close-button">Close</button>
+    </div>
+    <div class="history-list-container">
+      <ul class="history-list">
+        <li *ngFor="let day of historyData.days" class="history-day">
+          <div class="card">
+            <p><strong>Date:</strong> {{ day.datetime | date: 'fullDate' }}</p>
+            <p><i class="wi wi-thermometer"></i> Max Temp: {{ day.tempmax }}°C</p>
+            <p><i class="wi wi-thermometer"></i> Min Temp: {{ day.tempmin }}°C</p>
+            <p><i class="wi wi-thermometer"></i> Temp: {{ day.temp }}°C</p>
+            <p><i class="wi wi-humidity"></i> Humidity: {{ day.humidity }}%</p>
+            <p><i class="wi wi-raindrop"></i> Precipitation: {{ day.precip }} mm</p>
+            <p><i class="wi wi-snow"></i> Snow: {{ day.snow }} mm</p>
+            <p><i class="wi wi-cloudy"></i> Conditions: {{ day.conditions }}</p>
+            <p><i class="wi wi-sunrise"></i> Sunrise: {{ day.sunrise }}</p>
+            <p><i class="wi wi-sunset"></i> Sunset: {{ day.sunset }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Display forecast data if available -->
+  <div *ngIf="forecastData" class="forecast-display">
+    <div class="header">
+      <h3>Forecast Data</h3>
+      <button mat-icon-button (click)="onClose()" aria-label="Close" class="close-button">Close</button>
+    </div>
+    <div class="forecast-list-container">
+      <ul class="forecast-list">
+        <li *ngFor="let day of forecastData.days" class="forecast-day">
+          <div class="card">
+            <p><strong>Date:</strong> {{ day.datetime | date: 'fullDate' }}</p>
+            <p><i class="wi wi-thermometer"></i> Max Temp: {{ day.tempmax }}°C</p>
+            <p><i class="wi wi-thermometer"></i> Min Temp: {{ day.tempmin }}°C</p>
+            <p><i class="wi wi-thermometer"></i> Temp: {{ day.temp }}°C</p>
+            <p><i class="wi wi-humidity"></i> Humidity: {{ day.humidity }}%</p>
+            <p><i class="wi wi-raindrop"></i> Precipitation: {{ day.precip }} mm</p>
+            <p><i class="wi wi-snow"></i> Snow: {{ day.snow }} mm</p>
+            <p><i class="wi wi-cloudy"></i> Conditions: {{ day.conditions }}</p>
+            <p><i class="wi wi-sunrise"></i> Sunrise: {{ day.sunrise }}</p>
+            <p><i class="wi wi-sunset"></i> Sunset: {{ day.sunset }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
